@@ -13,6 +13,6 @@ phases:
       - aws eks update-kubeconfig --region ap-south-1 --name my-eks-cluster-reva
   build:
     commands:
-      - echo Using NGINX version: $NGINX_VERSION
+      - echo using Nginx Version:$NGINX_VERSION
       - sed "s/\${NGINX_VERSION}/$NGINX_VERSION/g" nginx-deployment.yaml > final.yaml
       - kubectl apply -f final.yaml
