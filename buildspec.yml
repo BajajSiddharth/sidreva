@@ -1,5 +1,9 @@
 version: 0.2
 
+env:
+  variables:
+    NGINX_VERSION: 1.11.10-alpine
+
 phases:
   install:
     commands:
