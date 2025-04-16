@@ -13,6 +13,7 @@ phases:
       - chmod +x ./kubectl
      # - mv ./kubectl /usr/local/bin/
       - mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$HOME/bin:$PATH
+      - kubectl version --client
   pre_build:
     commands:
       - echo Configuring access to EKS...
