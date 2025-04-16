@@ -19,4 +19,5 @@ phases:
     commands:
      # - echo using Nginx Version: $NGINX_VERSION
       - sed "s/\${NGINX_VERSION}/$NGINX_VERSION/g" nginx-deployment.yaml > final.yaml
+      - dos2unix final.yaml
       - kubectl apply -f final.yaml
